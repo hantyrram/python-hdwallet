@@ -178,7 +178,6 @@ class BitcoinCashAddress(IAddress):
         address_type = None
         if kwargs.get('decode_type'):
             type_bits = (version & 0b01111000) >> 3
-            print('typebits', type_bits)
             address_type = BitcoinCashAddressType(type_bits)
             return {
                 'payload': bytes_to_string(address_hash),
