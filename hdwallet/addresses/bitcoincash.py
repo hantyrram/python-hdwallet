@@ -175,7 +175,6 @@ class BitcoinCashAddress(IAddress):
         # First byte is version, rest is hash
         version = decoded[0]
         address_hash = bytes(decoded[1:])
-        address_type = None
         if kwargs.get('decode_type'):
             type_bits = (version & 0b01111000) >> 3
             address_type = BitcoinCashAddressType(type_bits)
