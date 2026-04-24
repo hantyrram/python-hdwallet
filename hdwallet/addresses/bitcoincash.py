@@ -129,7 +129,7 @@ class BitcoinCashAddress(IAddress):
         :return: The decoded address as a string.
         :rtype: str
         """
-        hrp_expected = [BitcoinCash.NETWORKS.MAINNET.HRP, BitcoinCash.NETWORKS.TESTNET.HRP, BitcoinCash.NETWORKS.MAINNET.HRP]
+        hrp_expected = [BitcoinCash.NETWORKS.MAINNET.HRP, BitcoinCash.NETWORKS.TESTNET.HRP, BitcoinCash.NETWORKS.REGTEST.HRP]
 
         # Parse address
         if ':' in address:
